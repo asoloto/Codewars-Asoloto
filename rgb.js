@@ -5,7 +5,7 @@ rgb(0,0,0) // returns 000000
 rgb(148, 0, 211) // returns 9400D3
 */
 function rgb(r, g, b){
-    return [r,g,b].map(val=>val>255 ? 255: val<0 ? 0 : val).map(el => el.toString(16).toUpperCase()).map(n=>n.length==1 ?'0'+n:n)
+    return [r,g,b].map(val=>val>255 ? 255: val<0 ? 0 : val).map(el => el.toString(16).toUpperCase()).map(n=>n.length==1 ?'0'+n:n).join("")
 }
 
 console.log(rgb(233,15,153));
